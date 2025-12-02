@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Motos</title>
+    <style>
+        /* Estilos Generales */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #1a1a1a; /* Fondo oscuro para resaltar las fotos */
+            color: white;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #e74c3c; /* Un rojo deportivo */
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* Contenedor tipo Rejilla (Grid) */
+        .catalogo {
+            display: grid;
+            /* Esto hace la magia: crea columnas automáticas de mínimo 300px */
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px; /* Espacio entre tarjetas */
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Estilo de la Tarjeta (La caja) */
+        .tarjeta-moto {
+            background-color: #2c2c2c;
+            border-radius: 15px;
+            overflow: hidden; /* Para que la imagen no se salga de las esquinas redondeadas */
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+            transition: transform 0.3s; /* Animación suave al pasar el mouse */
+        }
+
+        .tarjeta-moto:hover {
+            transform: translateY(-10px); /* Efecto de levitación */
+        }
+
+        /* Estilo de la Imagen */
+        .tarjeta-moto img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover; /* Recorta la imagen para que llene el espacio sin deformarse */
+        }
+
+        /* Contenido del texto */
+        .contenido {
+            padding: 20px;
+        }
+
+        .contenido h3 {
+            margin-top: 0;
+            color: #f1c40f; /* Amarillo para el título */
+        }
+
+        .specs {
+            list-style: none;
+            padding: 0;
+            font-size: 0.9em;
+            color: #ccc;
+        }
+
+        .specs li {
+            margin-bottom: 8px;
+            border-bottom: 1px solid #444;
+            padding-bottom: 5px;
+        }
+
+        .boton-ver {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #e74c3c;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        .boton-ver:hover {
+            background-color: #c0392b;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Mejores Motos Media Cilindrada</h1>
+
+    <div class="catalogo">
+        
+        <div class="tarjeta-moto">
+            <img src="https://imgs.search.brave.com/xckH1p_WQri-jVFZFK42bAbobQbw1C3FK2kndlob2VI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/YmlrZWRla2hvLmNv/bS9wcm9jZXNzZWRp/bWFnZXMvYmVuZWxs/aS9iZW5lbGxpLXRy/ay01MDIvc291cmNl/L2JlbmVsbGktdHJr/LTUwMjY4MWMyZWRh/MDY4MzIuanBnP2lt/d2lkdGg9ODgw" alt="Moto Deportiva">
+            <div class="contenido">
+                <h3>Benelli TRK 502</h3>
+                <ul class="specs">
+                    <li>🏁 <strong>Tipo:</strong> Aventura</li>
+                    <li>🚀 <strong>Motor:</strong> 500cc, Bicilindrico</li>
+                    <li>🐎 <strong>Potencia:</strong> 55 HP</li>
+                </ul>
+                <a href="#" class="boton-ver">Ver Detalles</a>
+            </div>
+        </div>
+
+        <div class="tarjeta-moto">
+            <img src="https://imgs.search.brave.com/naFvMIHindq5Yc1GV8mgr49n9mcsMdLPdjyMACdmJyQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9saXZl/LnN0YXRpY2ZsaWNr/ci5jb20vNjU1MzUv/NTQwMjk4ODAyODdf/YzZiMzg3YTZmYl9j/LmpwZw" alt="Moto Chopper">
+            <div class="contenido">
+                <h3>CF Moto CLC 450</h3>
+                <ul class="specs">
+                    <li>🏁 <strong>Tipo:</strong> Chopper / Custom</li>
+                    <li>🚀 <strong>Motor:</strong> 450cc, Bicilindrico</li>
+                    <li>🐎 <strong>Potencia:</strong> 52 HP</li>
+                </ul>
+                <a href="#" class="boton-ver">Ver Detalles</a>
+            </div>
+        </div>
+
+        <div class="tarjeta-moto">
+            <img src="https://imgs.search.brave.com/ROKf2hoky2iC0ATmC_eMkWHR2xRl9LnH1T4TxLriOF8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/cHJvZC53ZWJzaXRl/LWZpbGVzLmNvbS82/NzgzMDYzZDEyMTk4/MGUwOGQ3YWEyOTYv/NjdkYTE5OTdlZTdj/NDVjOWI1ODM0Mzc4/XzMwNjE1NjkwYThm/N2UwZTZhZDE3MjMy/ZTJiNWZjMDBjX240/MDBvbi53ZWJw" alt="Moto bristol-n400">
+            <div class="contenido">
+                <h3>Deportiva</h3>
+                <ul class="specs">
+                    <li>🏁 <strong>Tipo:</strong> Deportiva</li>
+                    <li>🚀 <strong>Motor:</strong> 400cc, Bicilíndrico</li>
+                    <li>🐎 <strong>Potencia:</strong> 42 HP</li>
+                </ul>
+                <a href="#" class="boton-ver">Ver Detalles</a>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
